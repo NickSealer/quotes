@@ -1,0 +1,16 @@
+<%= turbo_stream_from(:quotes_count) %>
+<div id="quotes-count">
+  <h1>All my Quotes (<%= Quote.count %>)</h1>
+</div>
+
+<%= turbo_frame_tag 'new_quote' do %>
+  <div class="button">
+    <%= link_to 'New Quote', new_quote_path %>
+  </div>
+<% end %>
+
+<%= turbo_frame_tag 'quotes' do %>
+  <% @quotes.all.each do |quote| %>
+    <%= render 'quotes/quote', quote: quote %>
+  <% end %>
+<% end %>

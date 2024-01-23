@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "show_quote_#{@quote.id}" do %>
+  <div>
+    <strong>ID: </strong><%= @quote.id %><br>
+    <%= @quote.created_at.strftime('Created on %m/%d/%Y - %I:%M%p') %><br>
+    <%= @quote.updated_at.strftime('Updated on %m/%d/%Y - %I:%M%p') %><br><br>
+    <%= link_to 'Back', quotes_path %>
+  </div><br>
+<% end %>

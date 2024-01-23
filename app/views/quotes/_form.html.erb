@@ -1,0 +1,22 @@
+<%= form_with(model: quote, class: 'quote-form', data: { controller: 'reset', action: 'turbo:submit-end->reset#reset' }) do |f| %>
+  <% if quote.errors.any? %>
+    <div class="errors">
+      <%= quote.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <div class="input">
+    <%= f.label 'Content:' %>
+    <%= f.text_area :content, rows: 5 %>
+  </div>
+  
+  <div class="input">
+    <%= f.label 'Author:' %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="input">
+    <%= link_to 'Cancel', quotes_path %>
+    <%= f.submit %>
+  </div>
+<% end %>

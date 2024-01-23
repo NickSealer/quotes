@@ -1,0 +1,60 @@
+.quote-card {
+  border: 2px aquamarine solid;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+    margin: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote-author {
+  text-align: end;
+  padding: 0px 50px;
+}
+
+.quote-form {
+  padding: 10px;
+  text-align: center;
+}
+
+.input {
+  margin: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.quote-opt, .quote-form {
+  font-style: normal;
+  
+  a {
+    background-color: beige;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid cadetblue;
+    padding: 0px 8px;
+    color: black;
+  }
+}
+
+.button {
+  text-align: center;
+  background-color: beige;
+  width: 140px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid cadetblue;
+}
+
+body {
+  padding: 10px;
+  margin: 10px;
+
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

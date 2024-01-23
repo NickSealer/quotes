@@ -1,0 +1,15 @@
+<%= turbo_frame_tag dom_id(quote)  do %>
+  <div class="quote-card">
+    <p><%= quote.content %></p>
+    <div class="quote-author"><%= quote.author %></div>
+    <div class="quote-opt">
+      <%= turbo_frame_tag "show_quote_#{quote.id}" do %>
+        <%= link_to 'Show', quote_path(quote) %>
+      <% end %>
+      <%= turbo_frame_tag "edit_quote_#{quote.id}" do %>
+        <%= link_to 'Edit', edit_quote_path(quote) %>
+      <% end %>
+      <%= link_to 'Delete', quote_path(quote), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    </div>
+  </div>
+<% end %>
