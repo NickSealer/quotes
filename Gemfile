@@ -11,7 +11,7 @@ gem 'rails', '~> 7.1.3'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg', '~> 1.5', '>= 1.5.6'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
@@ -38,7 +38,7 @@ gem 'redis', '>= 4.0.1'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[windows jruby]
+# gbunem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
@@ -47,7 +47,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'dotenv-rails', require: 'dotenv/load'
   gem 'pry'
 
   gem 'rails-controller-testing', '~> 1.0.5'
@@ -61,7 +61,7 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[mri windows]
+  # gem 'debug', platforms: %i[mri windows]
 end
 
 group :development do
